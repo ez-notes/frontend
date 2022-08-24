@@ -1,7 +1,7 @@
 {
   "name": "ez-notes",
   "version": "0.1.0",
-  "homepage": "rancor38.github.io/ez-notes",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
