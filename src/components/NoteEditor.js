@@ -56,7 +56,7 @@ const NoteEditor = ({ match }) => {
                         <label htmlFor='title'>Title</label>
                         <input onChange={handleChange} id='title' value={note.title} />
                         <label htmlFor='note'>Note</label>
-                        <input
+                        <textarea
                             onChange={handleChange}
                             id='note'
                             value={note.note}
