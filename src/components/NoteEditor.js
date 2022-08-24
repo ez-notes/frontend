@@ -10,7 +10,7 @@ const NoteEditor = ({ match }) => {
     const [modal, setModal] = useState(false)
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/notes/${id}`)
+        axios.get(`http://eznotesbackend-env.eba-gvgtcyqj.us-west-1.elasticbeanstalk.com/api/notes/${id}`)
             .then((res) => {
             setNote(res.data)
         })
@@ -30,12 +30,12 @@ const NoteEditor = ({ match }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.put(`http://localhost:8000/api/notes/${id}`, note)
+        axios.put(`http://eznotesbackend-env.eba-gvgtcyqj.us-west-1.elasticbeanstalk.com/api/notes/${id}`, note)
         .then(navigate('/'))
     }
 
     const handleDelete = () => {
-        axios.delete(`http://localhost:8000/api/notes/${id}`)
+        axios.delete(`http://eznotesbackend-env.eba-gvgtcyqj.us-west-1.elasticbeanstalk.com/api/notes/${id}`)
             .then(() => {
             navigate('/')
             })

@@ -16,7 +16,7 @@ const Notes = () => {
         }, 5000)
         
         // the axios request
-        axios.get('http://localhost:8000/api/notes')
+        axios.get('http://eznotesbackend-env.eba-gvgtcyqj.us-west-1.elasticbeanstalk.com/api/notes')
             .then(res => {
                 setNotes(res.data)
                 setLoading(false)
