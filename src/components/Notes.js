@@ -6,6 +6,8 @@ const Notes = () => {
 // Create a state for all of the notes that will be rendered to the page.
     const [notes, setNotes] = useState([])
     const [loading, setLoading] = useState(true)
+// A variable for reverse, that will be used to make the newest notes added to the db show up first
+    const reversed = [...notes].reverse()
 // useEffect to make some axios requests
     useEffect(() => {
         // Timeout handling will go here
@@ -33,7 +35,7 @@ const Notes = () => {
 
     return (
         <ul>
-            {notes.map((note) => (
+            {reversed.map((note) => (
                 <Note key={note._id} note={note} />
             ))}
         </ul>
