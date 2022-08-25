@@ -39,8 +39,6 @@ const NoteEditor = ({ match }) => {
             .then(() => {
             navigate('/')
             })
-        
-        navigate('/')
     }
 
     if (!note) {
