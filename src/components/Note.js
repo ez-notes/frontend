@@ -5,7 +5,7 @@ const Note = ({ note }) => {
     return (
         <li>
             <Link to={`/notes/${note._id}`}>
-                <Card style={{ width: "18rem" }}>
+                <Card style={{ width: "13rem" }}>
                 <Card.Title>{note.title}</Card.Title>
                 </Card>
             </Link>

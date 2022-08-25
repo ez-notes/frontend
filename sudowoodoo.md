@@ -1,8 +1,8 @@
 This is my pseudocode.
 
-After deploying I'm going to make.
+Make a "Create Notes" button to reach full CRUD
 
-CSS Bootstrap for the cards for the notes.
+Then, make Users function (Fuck Auth for now)
 
 A sign in for the user
 

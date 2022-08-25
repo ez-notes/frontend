@@ -18,7 +18,7 @@ const Notes = () => {
         }, 5000)
         
         // the axios request
-        axios.get('http://eznotesbackend-env.eba-gvgtcyqj.us-west-1.elasticbeanstalk.com/api/notes')
+        axios.get('https://eznotesbackend.herokuapp.com/api/notes/')
             .then(res => {
                 setNotes(res.data)
                 setLoading(false)

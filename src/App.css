@@ -26,8 +26,24 @@ header {
     text-shadow: 1px 1px 0 gray;
 }
 
+li {
+    border: 1px solid black;
+}
+
 ul {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
-    /* margin: -1rem; */
     padding: 0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.SEButtons {
+    color: brown;
 }

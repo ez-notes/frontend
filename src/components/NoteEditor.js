@@ -10,7 +10,7 @@ const NoteEditor = ({ match }) => {
     const [modal, setModal] = useState(false)
 
     useEffect(() => {
-        axios.get(`http://eznotesbackend-env.eba-gvgtcyqj.us-west-1.elasticbeanstalk.com/api/notes/${id}`)
+        axios.get(`https://eznotesbackend.herokuapp.com/api/notes/${id}`)
             .then((res) => {
             setNote(res.data)
         })
@@ -30,12 +30,12 @@ const NoteEditor = ({ match }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.put(`http://eznotesbackend-env.eba-gvgtcyqj.us-west-1.elasticbeanstalk.com/api/notes/${id}`, note)
+        axios.put(`https://eznotesbackend.herokuapp.com/api/notes/${id}`, note)
         .then(navigate('/'))
     }
 
     const handleDelete = () => {
-        axios.delete(`http://eznotesbackend-env.eba-gvgtcyqj.us-west-1.elasticbeanstalk.com/api/notes/${id}`)
+        axios.delete(`https://eznotesbackend.herokuapp.com/api/notes/${id}`)
             .then(() => {
             navigate('/')
             })
@@ -51,7 +51,7 @@ const NoteEditor = ({ match }) => {
         <section>
             {modal ? (
                 <div className='modal'>
-                    <h2>Editing {note.title}</h2>
+                    <h2>Editing "{note.title}"</h2>
                     <form onSubmit={handleSubmit}>
                         <label htmlFor='title'>Title</label>
                         <input onChange={handleChange} id='title' value={note.title} />
@@ -61,10 +61,8 @@ const NoteEditor = ({ match }) => {
                             id='note'
                             value={note.note}
                         />
-                        <button type='submit'>Submit</button>
-                        <button type='button' onClick={closeModal}>
-                            Close 
-                        </button>
+                            <button type='submit'>Save</button>
+                            <button type='submit' onClick={closeModal}>Exit</button>
                     </form>
                 </div>
             ) : (
