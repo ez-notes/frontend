@@ -17,6 +17,8 @@ a:hover {
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
     color: var(--light);
     background-color: var(--dark);
     font-family: Arial, Helvetica, sans-serif;

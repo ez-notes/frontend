@@ -1,8 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Notes from './components/Notes';
-import Header from './components/Header';
-import NoteEditor from './components/NoteEditor';
+import Notes from './components/notesComponents/Notes';
+import NoteEditor from './components/notesComponents/NoteEditor';
+import Header from './components/Header'
 
 const App = () => {
   return (
