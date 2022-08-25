@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
+import Button from 'react-bootstrap/Button';
 
 const NoteEditor = ({ match }) => {
     const { id } = useParams()
@@ -48,7 +49,7 @@ const NoteEditor = ({ match }) => {
     return (
         <section>
             {modal ? (
-                <div className='modal'>
+                <div className='editingModal'>
                     <h2>Editing "{note.title}"</h2>
                     <form onSubmit={handleSubmit}>
                         <label htmlFor='title'>Title</label>
@@ -59,8 +60,8 @@ const NoteEditor = ({ match }) => {
                             id='note'
                             value={note.note}
                         />
-                            <button type='submit'>Save</button>
-                            <button type='submit' onClick={closeModal}>Exit</button>
+                            <Button variant='dark' type='submit'>Save</Button>
+                            <Button variant='warning' type='submit' onClick={closeModal}>Exit without saving</Button>
                     </form>
                 </div>
             ) : (
@@ -68,8 +69,8 @@ const NoteEditor = ({ match }) => {
                         <h2>{note.title}</h2>
                         <h3>Note: {note.note}</h3>
 
-                        <button onClick={editShowPage}>Edit</button>
-                        <button onClick={handleDelete}>Delete</button>
+                        <Button variant='dark' onClick={editShowPage}>Edit</Button>
+                        <Button variant='danger' onClick={handleDelete}>Delete</Button>
                     </>
             )}
         </section>

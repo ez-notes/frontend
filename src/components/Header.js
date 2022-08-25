@@ -7,9 +7,6 @@ const Header = () => {
             <h1>
                 <a href="/">EZ-Notes</a>
             </h1>
-            <h1>
-                <a href='/new-note'>Add Note</a>
-            </h1>
         </header>
     );
 };

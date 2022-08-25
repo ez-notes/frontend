@@ -1,3 +1,5 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
 :root {
 	--dark: black;
 	--gray: rgb(180, 180, 180);
@@ -26,10 +28,6 @@ header {
     line-height: 1;
     margin: 0;
     text-shadow: 1px 1px 0 gray;
-}
-
-li {
-    border: 1px solid black;
 }
 
 ul {
