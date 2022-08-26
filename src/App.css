@@ -16,7 +16,7 @@ a {
 
 a:hover {
     background-color: var(--gray);
-    color: var(--light);
+    color: inherit;
 }
 
 header {
@@ -38,12 +38,6 @@ ul {
     list-style-type: none;
     padding: 0;
 }
-
-/* form {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-} */
 
 button {
     background-color: #4CAF50; /* Green */
@@ -69,6 +63,10 @@ button {
 
 .card {
     margin: 10px;
+}
+
+.danger {
+    background-color: #be2727; /* Red */
 }
 
 .notesBackdrop {
@@ -100,4 +98,21 @@ button {
     align-items: center;
     justify-content: center;
     flex-direction: column-reverse;
+}
+
+.noteEditorView {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.noteEditorEditDeleteButtons {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding-top: 10%;
+}
+
+.spacer {
+    padding-left: 5px;
 }

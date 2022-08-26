@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
+import { motion } from 'framer-motion';
 
 const NoteEditor = ({ match }) => {
     const { id } = useParams()
@@ -65,13 +66,31 @@ const NoteEditor = ({ match }) => {
                     </form>
                 </div>
             ) : (
-                    <>
+                    <div className='noteEditorView'>
                         <h2>{note.title}</h2>
                         <h3>Note: {note.note}</h3>
 
-                        <Button variant='dark' onClick={editShowPage}>Edit</Button>
-                        <Button variant='danger' onClick={handleDelete}>Delete</Button>
-                    </>
+                        <div className='noteEditorEditDeleteButtons'>
+                                <motion.button
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                                onClick={editShowPage}
+                            >
+                                Edit
+                            </motion.button>
+                                <span className='spacer'></span>
+                            <motion.button
+                                className='danger'
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                                onClick={handleDelete}
+                            >
+                                Delete
+                            
+                            </motion.button>
+                        </div>
+                    </div>
+                        
             )}
         </section>
     );
