@@ -1,11 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
-const NotesBackdrop = ({ children, onClick }) => {
+const EditorBackdrop = ({ children, onClick }) => {
     
     return (
         <motion.div
-            className='notesBackdrop'
+            className='Backdrop'
             onClick={onClick
             }
             initial={{ opacity: 0 }}
@@ -18,4 +17,4 @@ const NotesBackdrop = ({ children, onClick }) => {
     );
 };
 
-export default NotesBackdrop;
+export default EditorBackdrop;

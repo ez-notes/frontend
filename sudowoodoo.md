@@ -1,11 +1,5 @@
 This is my pseudocode.
 
-Make a "Create Notes" button to reach full CRUD
+Add in a welcome message, and a "sign up" note if the user isn't logged in.
 
-Then, make Users function (Fuck Auth for now)
-
-Notes have to load the ones that are owned by the user and only the user.
-
-Notes need to not load if the current user is not logged in.
-
-Tackle Auth.
+Made the Note Editor

@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react';
-import AddNote from './AddNote';
+import AddNote from './AddNoteModal';
 
 const AddNoteButton = () => {
     const [addNoteOpen, setAddNoteOpen] = useState(false)

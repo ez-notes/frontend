@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Note from './Note';
 import axios from 'axios';
-import AddNoteButton from './AddNoteButton';
+import AddNoteButton from './addNote/AddNoteButton';
 import { useAuth0 } from '@auth0/auth0-react';
 
 
