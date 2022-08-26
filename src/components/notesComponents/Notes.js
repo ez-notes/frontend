@@ -2,8 +2,11 @@ import { useState, useEffect } from 'react';
 import Note from './Note';
 import axios from 'axios';
 import AddNoteButton from './AddNoteButton';
+import { useAuth0 } from '@auth0/auth0-react';
+
 
 const Notes = () => {
+    const { user, isAuthenticated } = useAuth0()
 // Create a state for all of the notes that will be rendered to the page.
     const [notes, setNotes] = useState([])
     const [loading, setLoading] = useState(true)
@@ -33,17 +36,28 @@ const Notes = () => {
     if (!loading && !notes.length) {
         return <h2>Oops! Something went wrong. Try again later!</h2>
     }
-
+    const findMyNotes = () => {
+        for (let i = 0; i < reversed.length; i += 1) {
+            let ownerId = reversed[i].owner
+            console.log(ownerId + " " + [i])  
+        }
+    }
+    findMyNotes()
     return (
-        <>
-            {/* Render AddNoteButton above returned Notes */}
-            <AddNoteButton />
-        <ul>
-            {reversed.map((note) => (
-                <Note key={note._id} note={note} />
-            ))}
-            </ul>
-        </>
+        isAuthenticated && (
+            <>
+                
+                {/* {console.log(reversed[1].owner)}
+                {console.log(user.sub)} */}
+                {/* Render AddNoteButton above returned Notes */}
+                <AddNoteButton />
+            <ul>
+                {reversed.map((note) => (
+                    <Note key={note._id} note={note} />
+                ))}
+                </ul>
+            </>
+        )
     );
 };
 
