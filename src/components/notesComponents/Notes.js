@@ -36,23 +36,31 @@ const Notes = () => {
     if (!loading && !notes.length) {
         return <h2>Oops! Something went wrong. Try again later!</h2>
     }
-    const findMyNotes = () => {
-        for (let i = 0; i < reversed.length; i += 1) {
-            let ownerId = reversed[i].owner
-            console.log(ownerId + " " + [i])  
+// myNotes is an array, that takes the reversed array and looks for only the ones that match with the current logged in user. MyNotes begins as an empty array, but the findMyNotes function pushes the desired objects into the new myNotes array.
+    const myNotes =[]
+    const findMyNotes = (arr) => {
+        for (let i = 0; i < arr.length; i ++) {
+            let ownerId = arr[i].owner
+            // console.log(ownerId + " " + [i])
+            if (ownerId===user.sub) {
+                myNotes.push(arr[i])
+            }
         }
     }
-    findMyNotes()
+    // console.log(reversed)
+    
+    // console.log(findMyNotes(reversed))
+    console.log(myNotes)
+    // the .map below has to happen on an array that already is only the items where the reversed[i].owner === user.sub
+
     return (
         isAuthenticated && (
             <>
-                
-                {/* {console.log(reversed[1].owner)}
-                {console.log(user.sub)} */}
+                {findMyNotes(reversed)}
                 {/* Render AddNoteButton above returned Notes */}
                 <AddNoteButton />
             <ul>
-                {reversed.map((note) => (
+                    {myNotes.map((note) => (
                     <Note key={note._id} note={note} />
                 ))}
                 </ul>

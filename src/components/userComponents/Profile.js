@@ -6,6 +6,7 @@ const Profile = () => {
     return (
         isAuthenticated && (
             <div>
+                {JSON.stringify(user, null, 2)}
                 Token is {user.sub}
             </div>
         )
