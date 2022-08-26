@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Note from './Note';
 import axios from 'axios';
+import AddNoteButton from './AddNoteButton';
 
 const Notes = () => {
 // Create a state for all of the notes that will be rendered to the page.
@@ -34,11 +35,15 @@ const Notes = () => {
     }
 
     return (
+        <>
+            {/* Render AddNoteButton above returned Notes */}
+            <AddNoteButton />
         <ul>
             {reversed.map((note) => (
                 <Note key={note._id} note={note} />
             ))}
-        </ul>
+            </ul>
+        </>
     );
 };
 

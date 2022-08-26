@@ -1,5 +1,5 @@
 import React from 'react';
-import AddNote from './notesComponents/AddNote';
+import { Button } from 'react-bootstrap';
 
 const Header = () => {
     return (
@@ -7,6 +7,9 @@ const Header = () => {
             <h1>
                 <a href="/">EZ-Notes</a>
             </h1>
+            <h3>
+                <Button variant='secondary' href='/login'>Signup/Login</Button>
+            </h3>
         </header>
     );
 };

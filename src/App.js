@@ -4,17 +4,17 @@ import Notes from './components/notesComponents/Notes';
 import NoteEditor from './components/notesComponents/NoteEditor';
 import Header from './components/Header'
 import AddNote from './components/notesComponents/AddNote';
-import AddNoteButton from './components/notesComponents/AddNoteButton';
+import Login from './components/userComponents/Login';
 
 const App = () => {
   return (
     <div className="App">
       <Header />
-      <AddNoteButton />
       <Routes>
         <Route path='/' exact element={<Notes />} />
         <Route path='/notes/:id' element={<NoteEditor />} />
         <Route path='/new-note' element={<AddNote />} />
+        <Route path='login' element={<Login />} />
       </Routes>
     </div>
   );
