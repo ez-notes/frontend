@@ -7,9 +7,11 @@ import { useAuth0 } from '@auth0/auth0-react';
 
 const Notes = () => {
     const { user, isAuthenticated } = useAuth0()
+
 // Create a state for all of the notes that will be rendered to the page.
     const [notes, setNotes] = useState([])
     const [loading, setLoading] = useState(true)
+
 // A variable for reverse, that will be used to make the newest notes added to the db show up first
     const reversed = [...notes].reverse()
 // useEffect to make some axios requests
@@ -48,23 +50,22 @@ const Notes = () => {
         }
     }
     // console.log(reversed)
-    
     // console.log(findMyNotes(reversed))
-    console.log(myNotes)
+    // console.log(myNotes)
     // the .map below has to happen on an array that already is only the items where the reversed[i].owner === user.sub
 
     return (
         isAuthenticated && (
-            <>
+            <div className='notesButtonMover'>
                 {findMyNotes(reversed)}
                 {/* Render AddNoteButton above returned Notes */}
-                <AddNoteButton />
-            <ul>
+                <ul>
                     {myNotes.map((note) => (
                     <Note key={note._id} note={note} />
                 ))}
                 </ul>
-            </>
+                <AddNoteButton />
+            </div>
         )
     );
 };
