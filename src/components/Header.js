@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import Login from './userComponents/Login';
 
 const Header = () => {
     return (
@@ -8,7 +8,7 @@ const Header = () => {
                 <a href="/">EZ-Notes</a>
             </h1>
             <h3>
-                <Button variant='secondary' href='/login'>Signup/Login</Button>
+                <Login/>
             </h3>
         </header>
     );
