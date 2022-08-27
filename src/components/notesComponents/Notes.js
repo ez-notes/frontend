@@ -3,6 +3,7 @@ import Note from './Note';
 import axios from 'axios';
 import AddNoteButton from './addNote/AddNoteButton';
 import { useAuth0 } from '@auth0/auth0-react';
+import Loading from '../loader/Loading';
 
 
 const Notes = () => {
@@ -31,10 +32,7 @@ const Notes = () => {
             })
         return () => clearTimeout(handleLoadingTimeOut)
     }, [])
-    if (loading && !notes.length) {
-        return <h2>Loading...</h2>
-    }
-
+    
     if (!loading && !notes.length) {
         return <h2>Oops! Something went wrong. Try again later!</h2>
     }

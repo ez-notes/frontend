@@ -42,7 +42,12 @@ const NoteEditorModal = ({ handleClose, note, setNote }) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         axios.put(`https://eznotesbackend.herokuapp.com/api/notes/${id}`, note)
-        .then(navigate('/'))
+            .then(navigate('/'))
+            .then(() => {
+                setTimeout(() => {
+                 window.location.reload()   
+                }, 500)
+            })
     }
 
     return (
@@ -55,11 +60,11 @@ const NoteEditorModal = ({ handleClose, note, setNote }) => {
                 animate='visible'
                 exit='exit'
             >
-                <form
+                <form 
                     onSubmit={handleSubmit}>
                     <div>
                     <label className='edit-label' htmlFor='title'></label>
-                    <input onChange={handleChange}
+                        <input onChange={handleChange}
                         id='title'
                         value={note.title} />
                     </div>
@@ -67,8 +72,8 @@ const NoteEditorModal = ({ handleClose, note, setNote }) => {
                         <label className='edit-label'
                         htmlFor='note'>
                     </label>
-                    <textarea
-                        rows={9} cols={30}
+                    <textarea className='textarea'
+                        rows={9} cols={12}
                             onChange={handleChange}
                             id='note'
                             value={note.note}

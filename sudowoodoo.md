@@ -9,3 +9,7 @@ make edit model look nicer
 Make note a little shorter height
 
 Make Login Button motion.button
+
+ico favicon in the public folder
+
+change sign in logo on auth0

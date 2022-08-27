@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
-import Button from 'react-bootstrap/Button';
+import { Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import NoteEditorModal from './NoteEditorModal';
+import paperImage from '../paper-image.png'
 
 const NoteEditor = ({ match }) => {
     const { id } = useParams()
@@ -36,9 +37,10 @@ const NoteEditor = ({ match }) => {
     return (
         <section>
                     <div className='noteEditorView'>
-                        <h2>{note.title}</h2>
-                        <h3>Note: {note.note}</h3>
-
+                        <Card style={{ width: "60rem" }} onDoubleClick={open}>
+                    <Card.Title>{note.title}</Card.Title>
+                                <Card.Body className='noteText'>{note.note}</Card.Body>
+                        </Card>
                         <div className='noteEditorEditDeleteButtons'>
                                 <motion.button
                                 whileHover={{ scale: 1.1 }}

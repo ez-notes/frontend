@@ -1,11 +1,23 @@
 import { useAuth0 } from '@auth0/auth0-react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
+import Loading from '../loader/Loading';
 import paperImage from '../notesComponents/paper-image.png'
 import LoginButton from '../userComponents/LoginButton';
 
 const NewVisitor = () => {
-    const { isAuthenticated } = useAuth0()
+
+    // A loading screen to stop welcome screen from showing up whenever the page refreshes
+    const [loading, setLoading] = useState(true)
+ const { isAuthenticated } = useAuth0()
+    if (loading === true) {
+        setTimeout(() => setLoading(false), 800)
+        return (
+            <Loading />
+        )
+    };
+
+   
 
     return (
         !isAuthenticated && (
