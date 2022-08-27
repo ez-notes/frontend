@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Card } from 'react-bootstrap';
 import paperImage from './paper-image.png'
-import clickSound from '../soundEffectsLibrary/popity.wav'
+import clickSound from '../soundEffectsLibrary/489962__falcospizaetus__tearingpaper05.wav'
 import { motion } from 'framer-motion'
 
 const Note = ({ note }) => {
@@ -9,7 +9,7 @@ const Note = ({ note }) => {
     
 
     const clickNote = () => {
-        // new Audio(clickSound).play()
+        new Audio(clickSound).play()
     }
 
     return (

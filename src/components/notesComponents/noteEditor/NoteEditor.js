@@ -4,7 +4,6 @@ import axios from 'axios';
 import { Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import NoteEditorModal from './NoteEditorModal';
-import paperImage from '../paper-image.png'
 
 const NoteEditor = ({ match }) => {
     const { id } = useParams()
