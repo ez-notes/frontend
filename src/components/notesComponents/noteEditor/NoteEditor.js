@@ -36,7 +36,7 @@ const NoteEditor = ({ match }) => {
     return (
         <section>
                     <div className='noteEditorView'>
-                        <Card style={{ width: "60rem" }} onDoubleClick={open}>
+                        <Card style={{ width: "60rem"}} onDoubleClick={open}>
                     <Card.Title>{note.title}</Card.Title>
                                 <Card.Body className='noteText'>{note.note}</Card.Body>
                         </Card>

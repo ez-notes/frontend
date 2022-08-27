@@ -54,11 +54,12 @@ button {
 
 .card {
     margin: 10px;
-    min-height: fit-content;
+    height: 70vh;
 }
 
 .card-body {
     min-height: fit-content;
+    overflow: scroll;
 }
 
 .card-img-bottom {
