@@ -54,15 +54,21 @@ const NoteEditorModal = ({ handleClose, note, setNote }) => {
             >
                     <h2>Editing "{note.title}"</h2>
                     <form className='modal' onSubmit={handleSubmit}>
-                        <label htmlFor='title'>Title</label>
+                        <label htmlFor='title'></label>
                         <input onChange={handleChange} id='title' value={note.title} />
-                        <label htmlFor='note'>Note</label>
+                        <label htmlFor='note'></label>
                         <textarea
                             onChange={handleChange}
                             id='note'
                             value={note.note}
                         />
-                            <button type='submit'>Save</button>
+                    <motion.button
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        type='submit'
+                    >
+                        Save
+                    </motion.button>
                     </form>
                 
             </motion.div>

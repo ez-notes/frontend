@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import NotesBackdrop from './NotesBackdrop';
 import { useAuth0 } from '@auth0/auth0-react';
@@ -39,8 +38,6 @@ const AddNote = ({ handleClose, text }) => {
         note: "",
         owner: ""
     })
-
-    const navigate = useNavigate()
     
     const handleChange = (event) => {
         setNote({...note, [event.target.id]: event.target.value, owner: `${user.sub}` })
