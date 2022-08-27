@@ -18,6 +18,18 @@ a:hover {
     color: inherit;
 }
 
+.Backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1000%;
+    width: 100%;
+    background: #000000e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 button {
     background-color: #4CAF50; /* Green */
     border: none;
@@ -69,18 +81,6 @@ button {
 
 .danger {
     background-color: #be2727; /* Red */
-}
-
-.Backdrop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 1000%;
-    width: 100%;
-    background: #000000e1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 header {
@@ -227,6 +227,10 @@ body{
 
 
 .area{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
     background: #4097df;  
     background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
     width: 100%;

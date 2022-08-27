@@ -11,7 +11,7 @@ import NewVisitor from './components/newVisitor/NewVisitor';
 const App = () => {
   return (
     <div className="App">
-      <div class="area" >
+      
       <Header />
       <NewVisitor />
       <Routes>
@@ -20,7 +20,8 @@ const App = () => {
         <Route path='/new-note' element={<AddNote />} />
         <Route path='login' element={<Login />} />
         </Routes>
-        {/* below is just for floating notes in bg, see div class"area" above */}
+      {/* below is just for floating notes in bg, see div class"area" above */}
+      <div class="area" >
             <ul class="circles">
                     <li></li>
                     <li></li>
