@@ -25,7 +25,7 @@ const Note = ({ note }) => {
         >
             <Link to={`/notes/${note._id}`} onClick={clickNote}>
                 <Card style={{ width: "15rem", height: "10rem" }}>
-                    <Card.Title>{note.title}</Card.Title>
+                    <Card.Title>{note.title.substring(0,20) + '...'}</Card.Title>
                     <Card.Img variant='bottom' src={paperImage} />
                     <Card.ImgOverlay>
                         <Card.Body className='noteText' variant='bottom'>{note.note.substring(0, 100)}</Card.Body>

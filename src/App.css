@@ -68,7 +68,7 @@ button {
 }
 
 .card-img-bottom {
-    height: 8rem;
+    min-height: 8rem;
 }
 
 .card-img-overlay {
@@ -211,9 +211,16 @@ ul {
     justify-content: center;
 }
 
+.welcomeText {
+    font-size: x-large;
+}
+
 @media screen and (max-width: 1000px) {
     ul {
         justify-content: center;
+    }
+    .welcomeText {
+        font-size: large;
     }
 }
 
