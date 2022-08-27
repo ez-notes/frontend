@@ -24,7 +24,7 @@ const NewVisitor = () => {
                     <Card.Title><h3>Welcome to EZ Notes!</h3></Card.Title>
                     <Card.Img variant='bottom' src={paperImage} />
                     <Card.ImgOverlay>
-                        <Card.Body className='text-left welcomeText' variant='bottom'><br/>Welcome to EZ-Notes, a simple place to store some notes. Click 'Login' to login, or sign up, and you can quickly jot down some notes by clicking on the 'Add Note' button!</Card.Body>
+                        <Card.Body className='text-left welcomeText' variant='bottom'><br/>Welcome to EZ-Notes, a simple place to store some notes. Click 'Sign-up/Login' to login, or sign up, and you can quickly jot down some notes by clicking on the 'Add Note' button!</Card.Body>
                     </Card.ImgOverlay>
                     <LoginButton/>
                 </Card>

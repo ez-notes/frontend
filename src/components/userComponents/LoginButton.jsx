@@ -12,7 +12,7 @@ const LoginButton = () => {
                 whileTap={{ scale: 0.9 }}
                 className='button'
                 onClick={() => loginWithRedirect()}>
-                Signup/Login
+                Sign-up/Login
             </motion.button>
         )
     );

@@ -63,7 +63,7 @@ button {
 }
 
 .card-body {
-    min-height: fit-content;
+    max-height: fit-content;
     overflow: scroll;
 }
 
