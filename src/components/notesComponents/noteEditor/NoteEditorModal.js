@@ -49,25 +49,37 @@ const NoteEditorModal = ({ handleClose, note, setNote }) => {
         <EditorBackdrop onClick={handleClose}>
             <motion.div
                 onClick={(e) => e.stopPropagation()}
-                className='modal'
+                className='modal edit-form'
                 variants={dropIn}
+                initial='hidden'
+                animate='visible'
+                exit='exit'
             >
-                    <h2>Editing "{note.title}"</h2>
-                    <form className='modal' onSubmit={handleSubmit}>
-                        <label htmlFor='title'></label>
-                        <input onChange={handleChange} id='title' value={note.title} />
-                        <label htmlFor='note'></label>
-                        <textarea
+                <form
+                    onSubmit={handleSubmit}>
+                    <div>
+                    <label className='edit-label' htmlFor='title'></label>
+                    <input onChange={handleChange}
+                        id='title'
+                        value={note.title} />
+                    </div>
+                    <div>
+                        <label className='edit-label'
+                        htmlFor='note'>
+                    </label>
+                    <textarea
+                        rows={9} cols={30}
                             onChange={handleChange}
                             id='note'
                             value={note.note}
                         />
+                        </div>
                     <motion.button
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         type='submit'
                     >
-                        Save
+                        Save & Return
                     </motion.button>
                     </form>
                 

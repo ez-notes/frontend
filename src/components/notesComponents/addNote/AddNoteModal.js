@@ -60,7 +60,7 @@ const AddNote = ({ handleClose, text }) => {
         <NotesBackdrop onClick={handleClose}>
             <motion.div
                 onClick={(e) => e.stopPropagation()}
-                className='modal'
+                className='modal create-form'
                 variants={dropIn}
                 initial='hidden'
                 animate='visible'
@@ -73,7 +73,9 @@ const AddNote = ({ handleClose, text }) => {
                     </div>
                     <div>
                         <label className="create-label" htmlFor="note"></label>
-                        <textarea onChange={handleChange} rows={9} cols={30} type="text" id="note" placeholder="Note" />
+                        <textarea
+                            rows={9} cols={30}
+                            onChange={handleChange} type="text" id="note" placeholder="Note" />
                     </div>
                     <motion.button
                     whileHover={{ scale: 1.1 }}

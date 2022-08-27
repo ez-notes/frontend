@@ -12,7 +12,7 @@ const Login = () => {
     return (
             <>
             <LoginButton/>
-            <LogoutButton />
+            <LogoutButton/>
             {/* If I need to check profile information, comment in Profile.js below */}
             {/* <Profile/> */}
         </>

@@ -1,6 +1,5 @@
 import React from 'react'
 import { useAuth0 } from '@auth0/auth0-react';
-import { Button } from 'react-bootstrap';
 import { motion } from 'framer-motion'
 
 const LoginButton = () => {
@@ -8,13 +7,13 @@ const LoginButton = () => {
 
     return (
         !isAuthenticated && (
-            <Button
+            <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 className='button'
                 onClick={() => loginWithRedirect()}>
-                Login
-            </Button>
+                Signup/Login
+            </motion.button>
         )
     );
 };

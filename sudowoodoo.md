@@ -1,9 +1,11 @@
 This is my pseudocode.
 
-Add in a welcome message, and a "sign up" note if the user isn't logged in.
+make welcome message better
 
 Edit model needs to refresh page/ reload window
 
+make edit model look nicer
+
 Make note a little shorter height
 
-Made the Note Editor
+Make Login Button motion.button

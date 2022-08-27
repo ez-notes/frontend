@@ -20,11 +20,11 @@ const Note = ({ note }) => {
             onHoverStart={clickNote}
         >
             <Link to={`/notes/${note._id}`} onClick={clickNote}>
-                <Card style={{ width: "15rem", height: "15rem" }}>
+                <Card style={{ width: "15rem", height: "10rem" }}>
                     <Card.Title>{note.title}</Card.Title>
                     <Card.Img variant='bottom' src={paperImage} />
                     <Card.ImgOverlay>
-                        <Card.Body variant='bottom'>{note.note.substring(0, 100)}</Card.Body>
+                        <Card.Body className='noteText' variant='bottom'>{note.note.substring(0, 100)}</Card.Body>
                     </Card.ImgOverlay>
                 </Card>
             </Link>
