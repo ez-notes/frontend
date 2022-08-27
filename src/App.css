@@ -256,7 +256,7 @@ body{
     top: 0;
     z-index: -1;
     background: #4097df;  
-    background: -webkit-linear-gradient(to left, #8f94fb, #4097df);  
+    background: -webkit-linear-gradient(to left, #3877ae, #4097df);  
     width: 100vw;
     min-height: 120vh;
 }
