@@ -25,10 +25,10 @@ const Note = ({ note }) => {
         >
             <Link to={`/notes/${note._id}`} onClick={clickNote}>
                 <Card style={{ width: "15rem", height: "10rem" }}>
-                    <Card.Title>{note.title}</Card.Title>
+                    <Card.Title id='shorthand'>{note.title}</Card.Title>
                     <Card.Img variant='bottom' src={paperImage} />
                     <Card.ImgOverlay>
-                        <Card.Body className='noteText' variant='bottom'>{note.note.substring(0, 50)}</Card.Body>
+                        <Card.Body className='noteText' id='shorthand' variant='bottom'>{note.note.substring(0, 50)}</Card.Body>
                     </Card.ImgOverlay>
                 </Card>
             </Link>
