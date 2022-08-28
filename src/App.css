@@ -1,5 +1,4 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
-@import-normalize;
 
 
 :root {
@@ -26,9 +25,9 @@ a:hover {
     height: 1000%;
     width: 100%;
     background: #000000e1;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 
 body {
@@ -59,6 +58,7 @@ button {
 
 .card {
     margin: 10px;
+    width: 96vw;
     height: 70vh;
 }
 
@@ -81,6 +81,11 @@ button {
 
 .card-title {
     text-align: center;
+    height: 12vh;
+    width: 230px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .center {
@@ -96,6 +101,8 @@ button {
 header {
     display: flex;
     justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
     color: var(--light);
     background-color: var(--dark);
     font-family: Arial, Helvetica, sans-serif;
@@ -152,12 +159,20 @@ header {
     align-items: center;
 }
 
-.modal.create-form {
-    align-items: center;
+.modal create-form {
+    justify-content: center;
+    width: fit-content;
 }
 
 .modal.edit-form {
     justify-content: center;
+    width: fit-content;
+}
+
+#note {
+    font-size: large;
+    width: 90vw;
+    height: 50vh;
 }
 
 .notesButtonMover {
@@ -168,6 +183,7 @@ header {
 }
 
 .noteEditorView {
+    width: 96vw;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -180,7 +196,13 @@ header {
 }
 
 .noteText {
+    padding-top: 10px;
     text-align: left;
+    height: 40vh;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .spacer {
@@ -188,12 +210,13 @@ header {
 }
 
 .textarea {
-    height: 20rem;
-    width: 50rem;
+    width: 90vw;
+    height: 50vh;
 }
 
 #title {
-    width: 13rem;
+    font-size: large;
+    width: 30vw;
 }
 
 ul {
@@ -223,6 +246,27 @@ ul {
         font-size: large;
     }
 }
+
+/* Below is the webkit scrollbar, loaded blank so it doesn't show */
+/* width */
+::-webkit-scrollbar {
+    width: 1px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0); 
+  }
 
 /* Below is all for background notes*/
 

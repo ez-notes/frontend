@@ -66,15 +66,14 @@ const AddNote = ({ handleClose, text }) => {
                 animate='visible'
                 exit='exit'
             >
-                <form className="create-form">
+                <form>
                     <div>
-                        <label className="create-label" htmlFor="title"></label>
+                        <label htmlFor="title"></label>
                         <input onChange={handleChange} type="text" id="title" placeholder="Title" />
                     </div>
                     <div>
-                        <label className="create-label" htmlFor="note"></label>
+                        <label htmlFor="note"></label>
                         <textarea
-                            rows={9} cols={30}
                             onChange={handleChange} type="text" id="note" placeholder="Note" />
                     </div>
                     <motion.button

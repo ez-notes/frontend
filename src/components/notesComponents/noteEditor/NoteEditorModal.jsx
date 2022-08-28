@@ -73,7 +73,6 @@ const NoteEditorModal = ({ handleClose, note, setNote }) => {
                         htmlFor='note'>
                     </label>
                     <textarea className='textarea'
-                        rows={9} cols={12}
                             onChange={handleChange}
                             id='note'
                             value={note.note}
