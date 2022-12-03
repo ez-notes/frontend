@@ -16,14 +16,14 @@ const NoteEditor = ({ match }) => {
     const open = () => setModalOpen(true)
 
     useEffect(() => {
-        axios.get(`https://eznotesbackend.herokuapp.com/api/notes/${id}`)
+        axios.get(`https://backend-production-0a8e.up.railway.app/api/notes/${id}`)
             .then((res) => {
             setNote(res.data)
         })
     }, [id])
 
     const handleDelete = () => {
-        axios.delete(`https://eznotesbackend.herokuapp.com/api/notes/${id}`)
+        axios.delete(`https://backend-production-0a8e.up.railway.app/api/notes/${id}`)
             .then(() => {
             navigate('/')
             })

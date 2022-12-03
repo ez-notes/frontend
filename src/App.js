@@ -3,7 +3,6 @@ import './App.css';
 import Notes from './components/notesComponents/Notes';
 import NoteEditor from './components/notesComponents/noteEditor/NoteEditor';
 import Header from './components/Header'
-import AddNoteButton from './components/notesComponents/addNote/AddNoteButton';
 import AddNote from './components/notesComponents/addNote/AddNoteModal';
 import Login from './components/userComponents/Login';
 import NewVisitor from './components/newVisitor/NewVisitor';

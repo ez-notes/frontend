@@ -25,7 +25,7 @@ const Notes = () => {
         }, 5000)
         
         // the axios request
-        axios.get('https://eznotesbackend.herokuapp.com/api/notes/')
+        axios.get('https://backend-production-0a8e.up.railway.app/api/notes')
             .then(res => {
                 setNotes(res.data)
                 setLoading(false)

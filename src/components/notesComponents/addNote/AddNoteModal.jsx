@@ -45,7 +45,7 @@ const AddNote = ({ handleClose, text }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        axios.post(`https://eznotesbackend.herokuapp.com/api/notes/`, note)
+        axios.post(`https://backend-production-0a8e.up.railway.app/api/notes`, note)
             .then(() => {
             handleClose()
             })

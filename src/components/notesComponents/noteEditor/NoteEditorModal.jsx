@@ -41,7 +41,7 @@ const NoteEditorModal = ({ handleClose, note, setNote }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.put(`https://eznotesbackend.herokuapp.com/api/notes/${id}`, note)
+        axios.put(`https://backend-production-0a8e.up.railway.app/api/notes/${id}`, note)
             .then(navigate('/'))
             .then(() => {
                 setTimeout(() => {
