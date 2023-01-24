@@ -4,8 +4,6 @@ import { motion } from 'framer-motion';
 import NotesBackdrop from './NotesBackdrop';
 import { useAuth0 } from '@auth0/auth0-react';
 
-const database = process.env.DATABASE;
-
 const dropIn = {
     hidden: {
         y: '-100vh',

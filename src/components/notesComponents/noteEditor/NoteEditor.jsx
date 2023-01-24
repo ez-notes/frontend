@@ -5,8 +5,6 @@ import { Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import NoteEditorModal from './NoteEditorModal';
 
-const database = process.env.DATABASE;
-
 const NoteEditor = ({ match }) => {
     const { id } = useParams()
     const navigate = useNavigate()

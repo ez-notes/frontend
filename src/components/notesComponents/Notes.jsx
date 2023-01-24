@@ -24,7 +24,7 @@ const Notes = () => {
         }, 5000)
         
         // the axios request
-        axios.get(`https://ez-note-backend.onrender.com//api/notes`)
+        axios.get(`https://ez-note-backend.onrender.com/api/notes`)
             .then(res => {
                 setNotes(res.data)
                 setLoading(false)
