@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import NotesBackdrop from './NotesBackdrop';
 import { useAuth0 } from '@auth0/auth0-react';
 
+const database = process.env.DATABASE;
+
 const dropIn = {
     hidden: {
         y: '-100vh',
@@ -45,7 +47,7 @@ const AddNote = ({ handleClose, text }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        axios.post(`https://backend-production-0a8e.up.railway.app/api/notes`, note)
+        axios.post(`${database}api/notes`, note)
             .then(() => {
             handleClose()
             })

@@ -5,6 +5,8 @@ import { Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import NoteEditorModal from './NoteEditorModal';
 
+const database = process.env.DATABASE;
+
 const NoteEditor = ({ match }) => {
     const { id } = useParams()
     const navigate = useNavigate()
@@ -16,14 +18,14 @@ const NoteEditor = ({ match }) => {
     const open = () => setModalOpen(true)
 
     useEffect(() => {
-        axios.get(`https://backend-production-0a8e.up.railway.app/api/notes/${id}`)
+        axios.get(`${database}api/notes/${id}`)
             .then((res) => {
             setNote(res.data)
         })
     }, [id])
 
     const handleDelete = () => {
-        axios.delete(`https://backend-production-0a8e.up.railway.app/api/notes/${id}`)
+        axios.delete(`${database}api/notes/${id}`)
             .then(() => {
             navigate('/')
             })
