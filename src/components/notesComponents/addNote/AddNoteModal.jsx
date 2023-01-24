@@ -47,7 +47,7 @@ const AddNote = ({ handleClose, text }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        axios.post(`${database}api/notes`, note)
+        axios.post(`https://ez-note-backend.onrender.com/api/notes`, note)
             .then(() => {
             handleClose()
             })

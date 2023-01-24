@@ -18,14 +18,14 @@ const NoteEditor = ({ match }) => {
     const open = () => setModalOpen(true)
 
     useEffect(() => {
-        axios.get(`${database}api/notes/${id}`)
+        axios.get(`https://ez-note-backend.onrender.com/api/notes/${id}`)
             .then((res) => {
             setNote(res.data)
         })
     }, [id])
 
     const handleDelete = () => {
-        axios.delete(`${database}api/notes/${id}`)
+        axios.delete(`https://ez-note-backend.onrender.com/api/notes/${id}`)
             .then(() => {
             navigate('/')
             })

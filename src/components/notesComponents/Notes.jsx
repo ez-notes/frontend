@@ -5,7 +5,6 @@ import AddNoteButton from './addNote/AddNoteButton';
 import { useAuth0 } from '@auth0/auth0-react';
 import Loading from '../loader/Loading';
 
-
 const Notes = () => {
     const { user, isAuthenticated } = useAuth0()
 
@@ -25,7 +24,7 @@ const Notes = () => {
         }, 5000)
         
         // the axios request
-        axios.get('https://backend-production-0a8e.up.railway.app/api/notes')
+        axios.get(`https://ez-note-backend.onrender.com//api/notes`)
             .then(res => {
                 setNotes(res.data)
                 setLoading(false)
