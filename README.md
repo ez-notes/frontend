@@ -16,7 +16,7 @@ Add Note Modal
 ![alt text](/readme-docs/5-Note-edit-page.png)
 
 ## TECHNOLOGIES USED
-The front-end of the application is built in React, react-bootstrap, framer/motion, and Auth0, and is attached to a backend application built using Express, Mongoose, MongoDB and Node.js. The backend is deployed on Railway and the frontend is deployed on Netlify.
+The front-end of the application is built in React, react-bootstrap, framer/motion, and Auth0, and is attached to a backend application built using Express, Mongoose, MongoDB and Node.js. The backend is deployed on Railway or Render (depending upon who's behaving) and the frontend is deployed on Netlify.
 
 ## INSTALLATION INSTRUCTIONS
 All you need to work EZ-Notes is a modern web browser and you're good to go!
