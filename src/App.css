@@ -158,6 +158,7 @@ header {
 .modal.edit-form {
     justify-content: center;
     width: fit-content;
+    background-color: white;
 }
 
 #note {
