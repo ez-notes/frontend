@@ -20,8 +20,8 @@ const App = () => {
         <Route path='login' element={<Login />} />
         </Routes>
       {/* below is just for floating notes in bg, see div class"area" above */}
-      <div class="area" >
-            <ul class="circles">
+      <div className="area" >
+            <ul className="circles">
                     <li></li>
                     <li></li>
                     <li></li>
