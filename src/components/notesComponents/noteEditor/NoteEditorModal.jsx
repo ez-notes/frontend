@@ -49,7 +49,10 @@ const NoteEditorModal = ({ handleClose, note, setNote }) => {
     // Subscribe to Quill's 'text-change' event to update the note state
     editorRef.current.on('text-change', () => {
       // Convert the updated Quill delta to a JSON string for saving in the database
-      setNote({ ...note, note: JSON.stringify(editorRef.current.getContents()) });
+      setNote((prevNote) => ({
+        ...prevNote,
+        note: JSON.stringify(editorRef.current.getContents()),
+      }));
     });
   
     // Cleanup when the component is unmounted
@@ -60,7 +63,7 @@ const NoteEditorModal = ({ handleClose, note, setNote }) => {
   
 
   const handleChange = (event) => {
-    setNote({ ...note, [event.target.id]: event.target.value });
+      setNote({ ...note, [event.target.id]: event.target.value });
   };
 
   const handleSubmit = (event) => {
