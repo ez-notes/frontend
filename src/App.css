@@ -28,11 +28,8 @@ a:hover {
     top: 0;
     left: 0;
     height: 1000%;
-    width: 100%;
+    width: 100vmax;
     background: #000000e1;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
 }
 
 body {
@@ -164,7 +161,7 @@ header {
     display: flex;
     align-items: center;
     margin-top: 6%;
-    width: 100%;
+    width: 100vmin;
     height: 60%;
 }
 
