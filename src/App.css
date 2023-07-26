@@ -94,8 +94,7 @@ button {
 header {
     display: flex;
     justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 100vw;
     color: var(--light);
     background-color: var(--dark);
     font-family: Arial, Helvetica, sans-serif;
@@ -103,6 +102,10 @@ header {
     line-height: 1;
     margin: 0;
     text-shadow: 1px 1px 0 gray;
+}
+
+header img {
+    width: 45vmin;
 }
 
 .loader {
