@@ -2,22 +2,11 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import { Card } from 'react-bootstrap';
 import paperImage from './paper-image.png'
-import hoverSound from '../soundEffectsLibrary/page_turn_03.wav'
-import clickSound from '../soundEffectsLibrary/page_turn_02.wav'
 import { motion } from 'framer-motion'
 import Quill from 'quill';
 import 'quill/dist/quill.bubble.css';
 
 const Note = ({ note }) => {
-
-    
-
-    const hoverNote = () => {
-        new Audio(hoverSound).play()
-    }
-    const clickNote = () => {
-        new Audio(clickSound).play()
-    }
 
     useEffect(() => {
         console.log(note)
@@ -52,9 +41,8 @@ const Note = ({ note }) => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className='cards'
-            // onHoverStart={hoverNote}
         >
-            <Link to={`/notes/${note._id}`} onClick={clickNote}>
+            <Link to={`/notes/${note._id}`}>
                 <Card style={{ width: "15rem", height: "11rem" }}>
                     <Card.Title id='shorthand'>{note.title}</Card.Title>
                     <Card.Img variant='bottom' src={paperImage} />
