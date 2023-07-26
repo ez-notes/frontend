@@ -9,7 +9,6 @@ import 'quill/dist/quill.bubble.css';
 const Note = ({ note }) => {
 
     useEffect(() => {
-        console.log(note)
         // Check if note is not null before setting the content
         if (note) {
         //check if the note is valid JSON
