@@ -182,11 +182,11 @@ header img {
     margin: auto; /* Center the modal */
 }
 
-.modal.edit-form {
+.edit-form {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   margin-top: 6%;
-  width: 100vmin;
+  /* width: 100vmin; */
   height: 60%;
 }
 
