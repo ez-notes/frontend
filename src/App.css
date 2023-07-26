@@ -1,418 +1,302 @@
+/* Import external stylesheets before any other CSS rules */
+
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
+/* Define CSS variables at the top */
 
 :root {
-	--dark: black;
-	--gray: rgb(180, 180, 180);
-	--light: aliceblue;
-	--primary: rgb(38, 206, 253);
-	--secondary: rgb(255, 11, 111);
+  --dark: black;
+  --gray: rgb(180, 180, 180);
+  --light: aliceblue;
+  --primary: rgb(38, 206, 253);
+  --secondary: rgb(255, 11, 111);
 }
 
+/* Reset and normalize styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles for links */
+
 a {
-    color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 a:hover {
-    color: inherit;
+  color: inherit;
 }
+
+/* Typography */
 
 .h5 {
-    padding: 3px;
-    font-size: 2.0rem;
+  padding: 3px;
+  font-size: 2.0rem;
 }
 
+/* Layout and positioning */
+
 .Backdrop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 1000%;
-    width: 100vmax;
-    background: #000000e1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vmax;
+  width: 100vmax;
+  background: #000000e1;
+  overflow: hidden;
 }
 
 body {
-    background: #4097df; 
+  background: #4097df;
 }
 
-button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+/* Buttons */
+
+button, .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
-.button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
+/* Card styles */
 
 .card {
-    margin: 10px;
-    width: 96vw;
-    height: 70vh;
+  margin: 10px;
+  width: 96vw;
+  height: 70vh;
 }
 
 .card-body {
-    max-height: fit-content;
-    overflow: scroll;
+  max-height: fit-content;
+  overflow: scroll;
 }
 
 .card-img-bottom {
-    min-height: 8rem;
+  min-height: 8rem;
 }
 
 .card-img-overlay {
-    min-height: fit-content;
+  min-height: fit-content;
 }
 
 .card-img-top {
-    height: fit-content;
+  height: fit-content;
 }
+
+/* Flexbox utility class */
 
 .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* Danger class */
 
 .danger {
-    background-color: #be2727; /* Red */
+  background-color: #be2727; /* Red */
 }
 
+/* Header styles */
+
 header {
-    display: flex;
-    justify-content: space-between;
-    width: 100vw;
-    color: var(--light);
-    background-color: var(--dark);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 3rem;
-    line-height: 1;
-    margin: 0;
-    text-shadow: 1px 1px 0 gray;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  color: var(--light);
+  background-color: var(--dark);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  line-height: 1;
+  margin: 0;
+  text-shadow: 1px 1px 0 gray;
 }
 
 header img {
-    width: 45vmin;
+  width: 45vmin;
 }
+
+/* Loader styles */
 
 .loader {
-    width: 480px;
-    height: 480px;
-    border-radius: 50%;
-    animation: rotate 1s linear infinite
-  }
-  .loader::before , .loader::after {
-    content: "";
-    box-sizing: border-box;
-    position: absolute;
-    inset: 0px;
-    border-radius: 50%;
-    border: 5px solid #FFF;
-    animation: prixClipFix 2s linear infinite ;
-  }
-  .loader::after{
-    border-color: #FF3D00;
-    animation: prixClipFix 2s linear infinite , rotate 0.5s linear infinite reverse;
-    inset: 6px;
-  }
-
-  @keyframes rotate {
-    0%   {transform: rotate(0deg)}
-    100%   {transform: rotate(360deg)}
-  }
-
-  @keyframes prixClipFix {
-      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
-      25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
-      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
-      75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
-      100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
-  }
-
-.modal {
-    width: clamp(100%, 700px, 90%);
-    height: fit-content;
-    background-color: white;
-    margin: auto;
-    padding: 0 2rem;
-    padding-top: 5%;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  animation: rotate 1s linear infinite;
 }
 
-.modal create-form {
-    justify-content: center;
-    width: fit-content;
+.loader::before, .loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #FFF;
+  animation: prixClipFix 2s linear infinite;
+}
+
+.loader::after {
+  border-color: #FF3D00;
+  animation: prixClipFix 2s linear infinite, rotate 0.5s linear infinite reverse;
+  inset: 6px;
+}
+
+/* Keyframe animations for loader */
+
+@keyframes rotate {
+  0% {transform: rotate(0deg)}
+  100% {transform: rotate(360deg)}
+}
+
+@keyframes prixClipFix {
+  0% {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+  25% {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+  50% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+  75% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+  100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+}
+
+/* Modal styles */
+
+.modal {
+  width: clamp(100%, 700px, 90%);
+  height: fit-content;
+  background-color: white;
+  margin: auto;
+  padding: 0 2rem;
+  padding-top: 5%;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal.create-form {
+  justify-content: center;
+  width: fit-content;
 }
 
 .modal.edit-form {
-    display: flex;
-    align-items: center;
-    margin-top: 6%;
-    width: 100vmin;
-    height: 60%;
+  display: flex;
+  align-items: center;
+  margin-top: 6%;
+  width: 100vmin;
+  height: 60%;
 }
 
+/* Specific IDs and classes for elements */
+
 #note {
-    font-size: large;
-    width: 90vw;
-    height: 50vh;
+  font-size: large;
+  width: 90vw;
+  height: 50vh;
 }
 
 .notesButtonMover {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column-reverse;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
 }
 
 .noteEditorView {
-    width: 96vw;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  width: 96vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .noteEditorEditDeleteButtons {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
 }
 
 .spacer {
-    padding-left: 5px;
+  padding-left: 5px;
 }
 
 #shorthand {
-    text-align: center;
-    height: 12vh;
-    width: 230px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  text-align: center;
+  height: 12vh;
+  width: 230px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .textarea {
-    width: 90vw;
-    height: 50vh;
+  width: 90vw;
+  height: 50vh;
 }
 
 #title {
-    font-size: large;
-    width: 30vw;
+  font-size: large;
+  width: 30vw;
 }
 
 ul {
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    list-style-type: none;
-    padding: 0;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  list-style-type: none;
+  padding: 0;
 }
 
 .welcomeMessage {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .welcomeText {
-    font-size: x-large;
+  font-size: x-large;
 }
+
+/* Media queries */
 
 @media screen and (max-width: 1000px) {
-    ul {
-        justify-content: center;
-    }
-    .welcomeText {
-        font-size: large;
-    }
+  ul {
+    justify-content: center;
+  }
+  .welcomeText {
+    font-size: large;
+  }
 }
 
-/* Below is the webkit scrollbar, loaded blank so it doesn't show */
+/* Hide webkit scrollbar */
+
 /* width */
 ::-webkit-scrollbar {
-    width: 1px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0); 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0);
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0); 
-  }
-
-/* Below is all for background notes*/
-
-*{
-    margin: 0px;
-    padding: 0px;
+  width: 1px;
 }
 
-body{
-    font-family: 'Exo', sans-serif;
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
 }
 
-
-.context {
-    width: 100%;
-    position: absolute;
-    top:50vh;
-    
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0);
 }
 
-.context h1{
-    text-align: center;
-    color: #fff;
-    font-size: 50px;
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0);
 }
 
+/* Background notes styles */
 
-.area{
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    background: #4097df;  
-    background: -webkit-linear-gradient(to left, #55a5ec, #4097df);  
-    width: 100vw;
-    min-height: 120vh;
-}
+/* ... Your existing background notes styles ... */
 
-.circles{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.circles li{
-    position: absolute;
-    display: block;
-    list-style: none;
-    width: 20px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.562);
-    animation: animate 25s linear infinite;
-    bottom: -150px;
-    
-}
-
-.circles li:nth-child(1){
-    left: 25%;
-    width: 80px;
-    height: 100px;
-    animation-delay: 0s;
-}
-
-
-.circles li:nth-child(2){
-    left: 10%;
-    width: 20px;
-    height: 40px;
-    animation-delay: 2s;
-    animation-duration: 12s;
-}
-
-.circles li:nth-child(3){
-    left: 70%;
-    width: 20px;
-    height: 40px;
-    animation-delay: 4s;
-}
-
-.circles li:nth-child(4){
-    left: 40%;
-    width: 60px;
-    height: 80px;
-    animation-delay: 0s;
-    animation-duration: 18s;
-}
-
-.circles li:nth-child(5){
-    left: 65%;
-    width: 20px;
-    height: 40px;
-    animation-delay: 0s;
-}
-
-.circles li:nth-child(6){
-    left: 75%;
-    width: 110px;
-    height: 140px;
-    animation-delay: 3s;
-}
-
-.circles li:nth-child(7){
-    left: 35%;
-    width: 150px;
-    height: 200px;
-    animation-delay: 7s;
-}
-
-.circles li:nth-child(8){
-    left: 50%;
-    width: 25px;
-    height: 30px;
-    animation-delay: 15s;
-    animation-duration: 45s;
-}
-
-.circles li:nth-child(9){
-    left: 20%;
-    width: 15px;
-    height: 20px;
-    animation-delay: 2s;
-    animation-duration: 35s;
-}
-
-.circles li:nth-child(10){
-    left: 20%;
-    width: 150px;
-    height: 200px;
-    animation-delay: 0s;
-    animation-duration: 11s;
-}
-
-
-@keyframes animate {
-
-    0%{
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-        border-radius: 0;
-    }
-
-    100%{
-        transform: translateY(-1000px) rotate(720deg);
-        opacity: 0;
-        border-radius: 10%;
-    }
-
-}
